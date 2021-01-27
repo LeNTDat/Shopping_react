@@ -1,24 +1,28 @@
 import React from "react";
-
-export default function TableHeader() {
+import "../assets/adminProduct.scss";
+export default function TableHeader(props) {
+  const { id, name, price, image } = props.product;
+  const isEditting = () => {
+    props.Editting(id);
+  };
+  const deleteProduct = () => {
+    props.deleteProduct(id);
+  };
   return (
-    <div className="table-headers">
-      <div className="table-head">
-        <div className="table-cell">id</div>
-        <div className="table-cell">Name</div>
-        <div className="table-cell">Image</div>
-        <div className="table-cell">Price</div>
-        <div className="table-cell">Action</div>
+    <div className="table-row">
+      <div className="table-cell">{id}</div>
+      <div className="table-cell">{name}</div>
+      <div className="table-cell">
+        <img src={image} alt="products"></img>
       </div>
-      <div className="table-row">
-        <div className="table-cell">#1</div>
-        <div className="table-cell">Name</div>
-        <div className="table-cell">Image</div>
-        <div className="table-cell">Price</div>
-        <div className="table-cell">
-          <button className=" btn btn-primary">Edit</button>
-          <button className="btn btn-primary">Delete</button>
-        </div>
+      <div className="table-cell">{price}</div>
+      <div className="table-cell">
+        <button className=" btn btn-primary" onClick={isEditting}>
+          Edit
+        </button>
+        <button className="btn btn-primary" onClick={deleteProduct}>
+          Delete
+        </button>
       </div>
     </div>
   );
