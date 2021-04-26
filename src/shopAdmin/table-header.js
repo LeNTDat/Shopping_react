@@ -13,7 +13,7 @@ export default function TableHeader(props) {
       <div className="table-cell">{id}</div>
       <div className="table-cell">{name}</div>
       <div className="table-cell">
-        <img src={image} alt="products"></img>
+        <img src={image[0]} alt="products"></img>
       </div>
       <div className="table-cell">{price}</div>
       <div className="table-cell">

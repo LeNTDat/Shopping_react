@@ -1,11 +1,12 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Allproducts from "./shopAdmin/client/Allproduct";
 import NewPro from "./shopAdmin/shopAdmin";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ProDetail from "./shopAdmin/client/Product-detail";
-import ShoppingCart from "./shopAdmin/client/shopping-cart";
+
 import { createStore } from "redux";
 import { Provider } from "react-redux";
+import ProDetail from "./shopAdmin/client/Product-detail";
+import ShoppingCart from "./shopAdmin/client/shopping-cart";
 import Navbarclient from "./shopAdmin/client/NavbarClient";
 import LoginUser from "./shopAdmin/login";
 

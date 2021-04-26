@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
-import "/reactjs/my-app/src/assets/custom.scss";
+import "../../assets/custom.scss";
 import "../../assets/style-pro.scss";
 export default function Quantity(props) {
   

@@ -28,7 +28,11 @@ export default class shopAd extends React.Component {
           <div
             className="col-md-2 sideBar "
             style={{ display: this.state.sidebar_open ? "block" : "none" }}
-          ></div>
+          >
+            <h3 className='text-center side-name'>
+              Admin
+            </h3>
+          </div>
           <div className={this.state.sidebar_open ? "col-md-10" : "col-md-12"}>
             <NavBar toggleSidebar={this.toggleSidebar} />
             <SideBar />

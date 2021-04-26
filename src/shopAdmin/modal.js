@@ -18,7 +18,7 @@ export default class ModalAd extends React.Component {
     }
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() { }
 
   componentWillUnmount() {
     this.props.clearEdditing();
@@ -52,7 +52,7 @@ export default class ModalAd extends React.Component {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">Add Product</h5>
+              <h5 className="modal-title">{this.props.editProduct ? "Edit Product" : "Add Product"}</h5>
               <button
                 type="button"
                 className="close"

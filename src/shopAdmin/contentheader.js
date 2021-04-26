@@ -93,15 +93,15 @@ export default class ContentHead extends React.Component {
             </div>
             {this.state.products.length > 0
               ? this.state.products.map((product) => {
-                  return (
-                    <TableHeader
-                      Editting={this.editProduct}
-                      deleteProduct={this.deleteProduct}
-                      key={product.id}
-                      product={product}
-                    />
-                  );
-                })
+                return (
+                  <TableHeader
+                    Editting={this.editProduct}
+                    deleteProduct={this.deleteProduct}
+                    key={product.id}
+                    product={product}
+                  />
+                );
+              })
               : "THERE IS NO ITEM "}
           </div>
         </div>
